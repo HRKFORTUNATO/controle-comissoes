@@ -1,4 +1,5 @@
 const { app, BrowserWindow, Menu } = require('electron');
+const path = require('path');
 
 function criarJanela() {
   Menu.setApplicationMenu(null);
@@ -6,6 +7,7 @@ function criarJanela() {
     width: 1200,
     height: 820,
     title: 'Controle de Comissões',
+    icon: path.join(__dirname, 'icon.png'),
     autoHideMenuBar: true,
     webPreferences: { contextIsolation: true }
   });

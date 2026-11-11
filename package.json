@@ -14,10 +14,39 @@
   "build": {
     "appId": "com.geracenter.comissoes",
     "productName": "Controle de Comissões",
-    "files": ["main.js", "index.html"],
-    "directories": { "output": "dist" },
-    "win": { "target": [{ "target": "portable", "arch": ["x64"] }, { "target": "nsis", "arch": ["x64"] }] },
-    "portable": { "artifactName": "Controle-de-Comissoes.exe" },
-    "nsis": { "artifactName": "Instalador-Controle-de-Comissoes.exe", "oneClick": false, "allowToChangeInstallationDirectory": true }
+    "files": [
+      "main.js",
+      "index.html",
+      "icon.png",
+      "icon.ico"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon.ico"
+    },
+    "portable": {
+      "artifactName": "Controle-de-Comissoes.exe"
+    },
+    "nsis": {
+      "artifactName": "Instalador-Controle-de-Comissoes.exe",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   }
 }
