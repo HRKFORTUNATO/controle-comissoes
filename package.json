@@ -1,0 +1,23 @@
+{
+  "name": "controle-comissoes",
+  "version": "1.0.0",
+  "description": "Controle de comissões de locação: contratos, faturas, recebimentos e renovações.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.geracenter.comissoes",
+    "productName": "Controle de Comissões",
+    "files": ["main.js", "index.html"],
+    "directories": { "output": "dist" },
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }, { "target": "nsis", "arch": ["x64"] }] },
+    "portable": { "artifactName": "Controle-de-Comissoes.exe" },
+    "nsis": { "artifactName": "Instalador-Controle-de-Comissoes.exe", "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
